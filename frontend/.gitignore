@@ -1,6 +1,7 @@
 # Logs
 logs
 node_modules/
+Access Link.txt
 
 *.log
 npm-debug.log*
