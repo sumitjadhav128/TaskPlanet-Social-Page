@@ -1,0 +1,305 @@
+#PostForm {
+    height: 212.6px;
+    /* CHANGE: Max-width keeps it neat on desktop, 95% makes it scale beautifully on mobile */
+    width: 100%;
+    max-width: 409px; 
+    margin: 50px auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px #0000001f;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 12px;
+    position: relative;
+}
+
+.PostHead {
+    margin-left: 2px;
+    font-size: 23px;
+    font-weight: 500;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif !important;
+}
+
+#PostForm textarea {
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    margin-top: 10px;
+    outline: none;
+    padding: 10px 6px;
+    width: 100%;
+}
+
+.bottomContent {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    /* CHANGE: Swapped width 94% to simple left/right positioning to prevent scaling misalignments */
+    left: 12px;
+    right: 12px;
+}
+
+.bottomContent button {
+    padding: 8px 24px;
+    border-radius: 20px;
+    border: none;
+    background: rgb(24, 119, 242);
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* Enabled */
+.bottomContent button:not(:disabled) {
+    background: rgb(24, 119, 242);
+}
+
+/* Disabled */
+.bottomContent button:disabled {
+    background: #c5c5c5;
+    cursor: not-allowed;
+}
+
+/* PostCardList */
+
+.PostItem {
+    /* CHANGE: Fluid dynamic width to protect mobile viewport layout */
+    width: 100%;
+    max-width: 409px;
+    margin: 20px auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px #0000001f;
+    background-color: #fff;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.PostItemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.PostItemHeader h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+}
+
+.PostItemHeader span {
+    font-size: 12px;
+    color: #777;
+}
+
+.PostContent {
+    margin: 12px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #222;
+    word-wrap: break-word;
+}
+
+.PostImage {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: block;
+}
+
+.PostActions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 14px;
+}
+
+.PostActions span {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.PostActions span:hover {
+    color: rgb(24, 119, 242);
+}
+
+/* comment page */
+/* Comment Page Structure Wrapper */
+.CommentPageContainer {
+    /* CHANGE: Enabled scaling wrapper width with padding guardrails */
+    width: 100%;
+    max-width: 409px;
+    margin: 0 auto;
+    padding-bottom: 90px; 
+    font-family: "Lato", sans-serif;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* User Metas & Header alignment matching the screenshot */
+.UserMetaLeft {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.UserAvatar, .CommentAvatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff9900, #ff5500);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.CommentAvatar {
+    background: #ccc; 
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+}
+
+.UserMetaTexts {
+    display: flex;
+    flex-direction: column;
+}
+
+.UserHandle, .CommentUserHandle {
+    font-size: 13px;
+    color: #666;
+    font-weight: 400;
+}
+
+.PostTime, .CommentTime {
+    font-size: 11px !important;
+    color: #999 !important;
+    margin-top: 2px;
+}
+
+/* Follow Button styling */
+.FollowBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* Comments List Structure */
+.CommentsWrapper {
+    /* CHANGE: Replaced width with fluid max-width rules */
+    width: 100%;
+    max-width: 409px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.CommentItem {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+}
+
+.CommentDetails {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.CommentUserHeader {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.CommentUserName {
+    font-weight: 700;
+    font-size: 14px;
+    color: #111;
+}
+
+.CommentTextContent {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Bottom Input Sticky Component Layout */
+.CommentInputStickyBar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* CHANGE: Allows the sticky footer bar to stay flush with mobile screens */
+    width: 100%;
+    max-width: 409px;
+    background: #fff; /* Added fallback background color so text behind doesn't bleed through */
+    padding: 12px 16px;
+    box-sizing: border-box;
+    border-top: 1px solid #eee;
+    z-index: 999;
+}
+
+.CommentInputInner {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 6px 4px 16px;
+}
+
+.CommentInputField {
+    flex: 1;
+    border: none;
+    background: #f0f2f5;
+    border-radius: 34px;
+    padding: 8px 9px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.CommentSendBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.CommentSendBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* --- Added Layout Safety Shield --- */
+/* This media query applies slight horizontal side padding on tiny viewports (smaller than 420px) 
+   so the boxes don't touch the absolute outer edges of mobile glass displays. */
+@media (max-width: 425px) {
+    #PostForm, .PostItem, .CommentPageContainer, .CommentsWrapper {
+        width: calc(100% - 20px); 
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
