@@ -52,7 +52,7 @@ const PostCard = ({onPostCreated}) => {
     }
 
     const res = await axios.post(
-      "http://192.168.244.196:5000/api/post/createpost",
+      "https://taskplanet-social-page.onrender.com/api/post/createpost",
       formData,
       {
         headers: {

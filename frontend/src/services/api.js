@@ -1,7 +1,7 @@
  import axios from "axios";
 
  const API = axios.create({
-   baseURL: "http://192.168.244.196:5000/api"
+   baseURL: "https://taskplanet-social-page.onrender.com/api"
  });
 
  export default API;
