@@ -15,6 +15,19 @@ function CommentPage() {
     setAllPosts(res.data);
   };
 
+  const getUserId = () => {
+  const token = localStorage.getItem("token");
+  if (!token) return null;
+
+  try {
+    return JSON.parse(atob(token.split(".")[1])).id;
+  } catch {
+    return null;
+  }
+};
+
+const userId = getUserId();
+
   useEffect(() => {
     fetchPosts();
   }, []);
@@ -86,7 +99,11 @@ function CommentPage() {
           {post.image?.url && <img src={post.image.url} className="PostImage" alt="post" />}
 
           <div className="PostActions">
-            <span>❤️ {post.likes?.length || 0}</span>
+            {/* <span>❤️ {post.likes?.length || 0}</span> */}
+
+            <span>
+  {post.likes?.includes(userId) ? "❤️" : "🤍"} {post.likes?.length || 0}
+</span>
             <span>💬 {post.comments?.length || 0}</span>
             <span>🔗 0</span>
           </div>
